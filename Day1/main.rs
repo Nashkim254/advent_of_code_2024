@@ -6,13 +6,29 @@ fn main() {
     right.sort();
 
     let sum = sum_of_loc_diff(&left, &right); // Pass slices or references
+    let sum2 = sum_of_similarities(&left, &right); // Pass slices or references
     println!("Sum of location differences: {}", sum);
+    println!("Sum of location similarities: {}", sum2);
 }
 
 fn sum_of_loc_diff(l: &[i32], r: &[i32]) -> i32 {
     let mut sum = 0;
     for i in 0..l.len() {
         sum += (l[i] - r[i]).abs(); // Use absolute difference
+    }
+    sum
+}
+
+fn sum_of_similarities(l: &[i32], r: &[i32]) -> i32 {
+    let mut sum = 0;
+    for i in 0..l.len() {
+        let mut frequency = 0;
+        for j in 0..r.len() {
+            if l[i] == r[j]{
+                frequency += 1;
+            }
+        }
+        sum += frequency * l[i];
     }
     sum
 }

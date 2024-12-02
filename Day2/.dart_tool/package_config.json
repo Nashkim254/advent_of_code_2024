@@ -1,0 +1,17 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "Day2",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    }
+  ],
+  "generated": "2024-12-02T15:32:52.392533Z",
+  "generator": "pub",
+  "generatorVersion": "3.4.3",
+  "flutterRoot": "file:///Users/value8/fvm/versions/3.22.2",
+  "flutterVersion": "3.22.2",
+  "pubCache": "file:///Users/value8/.pub-cache"
+}
